@@ -175,7 +175,7 @@ INTERNAL_KERNEL_CMDLINE := $(BOARD_KERNEL_CMDLINE)
 
 ifneq ($(filter OFFICIAL,$(CUSTOM_BUILD_TYPE)),)
 ifneq ($(filter androidboot.selinux=permissive,$(INTERNAL_KERNEL_CMDLINE)),)
-$(error Permissive selinux in official builds is not allowed)
+$(warning It is NOT recommended to build permissive Official builds.)
 endif
 endif
 
